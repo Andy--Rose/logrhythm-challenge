@@ -8,10 +8,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="student_row" ng-repeat="student in $ctrl.students">
-				<td>{{student.lastName}}</td>
-				<td>{{student.firstName}}</td>
-				<td>{{student.grade}}</td>
+			<tr class="student_row" ng-repeat="student in students">
+				<span id="{{student._id}}">
+					<td>{{student.lastName}}</td>
+					<td>{{student.firstName}}</td>
+					<td>{{student.grade}}</td>
+				</span>
 			</tr>
 		</tbody>
 	</table>
