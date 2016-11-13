@@ -3,6 +3,7 @@ angular.module('gradesApp', ['forerunnerdb', 'newStudent', 'students'])
 	.run(function ($rootScope, $fdb) {
 		var students = $fdb.db('grades').collection('students');
 		students.load();
+		students.load();
 		// $rootScope.$db = db;
 		// $rootScope.$students = db.collection('students');
 

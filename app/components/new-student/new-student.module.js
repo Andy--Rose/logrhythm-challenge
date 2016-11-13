@@ -17,14 +17,14 @@ angular.module("newStudent", [])
 					console.log("INFO: Save the grades DB file.");
 				}
 			});
-			$scope.reset();
+			$scope.resetInput();
 		};
 
-		$scope.reset = function() {
+		$scope.resetInput = function() {
 			$scope.firstName = "";
 			$scope.lastName = "";
 			$scope.grade = "";
 		};
 
-		$scope.reset();
+		$scope.resetInput();
 	});
