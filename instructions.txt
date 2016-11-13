@@ -1,0 +1,23 @@
+Programming Exercise
+
+	Use the MV* Javascript framework of your choice (e.g. Backbone , AngularJS, Knockout, etc.) to implement a page that satisfies the user story below. Submit a zip file containing the solution.
+
+User Story
+
+As a teacher, I want to enter a list of student names along with his or her test score on a page, so I may see a summary of my class’ performance on a test. The summary shall include the min, max, and average grade.
+
+Acceptance Criteria
+
+- The list shall support CRUD operations on student names and his or her associated grade 
+- The list shall support in-line editing of student names and grades, such that changing a test score and pressing enter (or clicking away from the input field) updates the model
+- Statistics shall automatically update after CRUD operations are performed
+- The list shall validate user input
+- Students in the list with a grade < 65 shall be highlighted to indicate a failing grade
+
+Guidance
+
+ The use of server-side technology (i.e. ASP.NET, Node.js, etc.) is not required, but you are free to use it.
+ You may use any mechanism that seems reasonable to preserve state (i.e. browser local storage, or a restful service), if your solution requires it. The simplest solution that gets the job done is fine, including mocking up a persistent data store.
+ You may use any additional Javascript libraries (e.g. Underscore, JQuery, etc), not mandated by the framework that are helpful.
+ Don’t overthink / overcomplicate it.
+ It’s OK to send us an e-mail if you have any questions.

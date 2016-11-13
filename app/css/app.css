@@ -1,0 +1,12 @@
+#new-student-container {
+	display: none;
+}
+
+.new-student-input {
+	float:left;
+	min-width: 150px;
+}
+
+.new-student-save{
+	float: left;
+}

@@ -1,0 +1,31 @@
+<html ng-app="gradesApp"> 
+<head>
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-controller="AppController">
+	<p><h1>Student Grades</h1></p>
+	<button id="toggleNewStudent">New Student</button>
+	<new-student></new-student>
+	<students> </students>
+
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./node_modules/forerunnerdb/js/dist/fdb-all.min.js"></script>
+	<script src="./node_modules/forerunnerdb/js/dist/fdb-angular.min.js"></script>
+	<script src="app.module.js"></script>
+	<script src="components/students/students.module.js"></script>
+	<script src="components/students/students.component.js"></script>
+	<script src="components/new-student/new-student.module.js"></script>
+	<script src="components/new-student/new-student.component.js"></script>
+</body>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#toggleNewStudent').click(function(){
+			$('#new-student-container').toggle();
+		})
+	})
+</script>
+</html>
