@@ -11,12 +11,36 @@
 		<tbody>
 			<tr class="student_row" ng-repeat="student in students">
 				<span id="{{student._id}}">
-					<td>{{student.lastName}}</td>
-					<td>{{student.firstName}}</td>
-					<td>{{student.grade}}</td>
+					<td>
+						<input 
+							type="text"
+							id="student-input-lastname-{{student._id}}"
+							class="student-input student-input-{{student._id}}"
+							ng-model="student.lastName"
+							readonly>
+						</input>
+					</td>
+					<td>
+						<input 
+							type="text"
+							id="student-input-firstname-{{student._id}}"
+							class="student-input student-input-{{student._id}}"
+							ng-model="student.firstName"
+							readonly>
+						</input>
+					</td>
+					<td>
+						<input 
+							type="text"
+							id="student-input-grade-{{student._id}}"
+							class="student-input student-input-{{student._id}}"
+							ng-model="student.grade"
+							readonly>
+						</input>
+					</td>
 					<td>
 						<button id="btn_delete_{{student._id}}" ng-click="deleteStudent(student._id)">Delete</button>
-						<button id="btn_edit_{{student._id}}">Edit</button>
+						<button id="btn_edit_{{student._id}}" ng-click="editToggle(student._id)">Edit</button>
 					</td>
 				</span>
 			</tr>
