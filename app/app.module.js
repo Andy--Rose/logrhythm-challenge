@@ -10,19 +10,16 @@ angular.module('gradesApp', ['forerunnerdb', 'newStudent', 'students'])
 					console.log("INFO: Adding default students to empty db.");
 					defaultStudents = [
 						{
-							"_id": 15,
 							"firstName": "John",
 							"lastName": "Doe",
 							"grade": 43
 						},
 						{
-							"_id": 16,
 							"firstName": "Jenn",
 							"lastName": "Smarts",
 							"grade": 99
 						},
 						{
-							"_id": 17,
 							"firstName": "Joe",
 							"lastName": "Shmoe",
 							"grade": 78

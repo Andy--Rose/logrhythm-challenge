@@ -12,35 +12,43 @@
 			<tr class="student_row" ng-repeat="student in students">
 				<span id="{{student._id}}">
 					<td>
-						<input 
-							type="text"
-							id="student-input-lastname-{{student._id}}"
+						<span
+							id="student-input-lastName-{{student._id}}"
 							class="student-input student-input-{{student._id}}"
-							ng-model="student.lastName"
-							readonly>
-						</input>
+							inline-edit="student.lastName"
+							inline-edit-callback="handleEdit(student, 'lastName')"
+							inline-edit-placeholder="student.lastName"
+							inline-edit-btn-edit=""
+							inline-edit-on-blur="save"
+							inline-edit-on-click>
+						</span>
 					</td>
 					<td>
-						<input 
-							type="text"
-							id="student-input-firstname-{{student._id}}"
+						<span
+							id="student-input-firstName-{{student._id}}"
 							class="student-input student-input-{{student._id}}"
-							ng-model="student.firstName"
-							readonly>
-						</input>
+							inline-edit="student.firstName"
+							inline-edit-callback="handleEdit(student, 'firstName')"
+							inline-edit-placeholder="student.firstName"
+							inline-edit-btn-edit=""
+							inline-edit-on-blur="save"
+							inline-edit-on-click>
+						</span>
 					</td>
 					<td>
-						<input 
-							type="text"
+						<span
 							id="student-input-grade-{{student._id}}"
 							class="student-input student-input-{{student._id}}"
-							ng-model="student.grade"
-							readonly>
-						</input>
+							inline-edit="student.grade"
+							inline-edit-callback="handleEdit(student, 'grade')"
+							inline-edit-placeholder="student.grade"
+							inline-edit-btn-edit=""
+							inline-edit-on-blur="save"
+							inline-edit-on-click>
+						</span>
 					</td>
 					<td>
 						<button id="btn_delete_{{student._id}}" ng-click="deleteStudent(student._id)">Delete</button>
-						<button id="btn_edit_{{student._id}}" ng-click="editToggle(student._id)">Edit</button>
 					</td>
 				</span>
 			</tr>
