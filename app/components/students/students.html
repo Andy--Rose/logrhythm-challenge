@@ -18,6 +18,7 @@
 							inline-edit="student.lastName"
 							inline-edit-callback="handleEdit(student, 'lastName')"
 							inline-edit-placeholder="student.lastName"
+							inline-edit-validation="validateName(newValue)"
 							inline-edit-btn-edit=""
 							inline-edit-on-blur="save"
 							inline-edit-on-click>
@@ -30,6 +31,7 @@
 							inline-edit="student.firstName"
 							inline-edit-callback="handleEdit(student, 'firstName')"
 							inline-edit-placeholder="student.firstName"
+							inline-edit-validation="validateName(newValue)"
 							inline-edit-btn-edit=""
 							inline-edit-on-blur="save"
 							inline-edit-on-click>
@@ -42,6 +44,7 @@
 							inline-edit="student.grade"
 							inline-edit-callback="handleEdit(student, 'grade')"
 							inline-edit-placeholder="student.grade"
+							inline-edit-validation="validateGrade(newValue)"
 							inline-edit-btn-edit=""
 							inline-edit-on-blur="save"
 							inline-edit-on-click>

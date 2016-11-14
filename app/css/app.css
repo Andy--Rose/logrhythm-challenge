@@ -11,7 +11,8 @@ input:focus:invalid {
 }
 
 input.ng-invalid-maxlength,
-input.ng-invalid {
+input.ng-invalid,
+.ng-inline-edit--error {
 	box-shadow: 0 0 5px 1px red;
 }
 

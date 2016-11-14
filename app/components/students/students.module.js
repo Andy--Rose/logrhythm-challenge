@@ -46,14 +46,28 @@ angular.module('students', ['angularInlineEdit'])
 			});
 		};
 
-		$scope.convertStudent = function(student) {
-			return {
-				"_id": student._id,
-				"firstName": student.firstName,
-				"lastName": student.lastName,
-				"grade": student.grade
+		$scope.validateName = function(newValue) {
+			if (newValue === null || newValue === "") {
+				return false;
+			} else if (newValue.length > 10) { // should be more than 10 chars
+				return false;
+			} else if (/[^a-zA-Z0-9]/.test(newValue)) {
+				return false;
 			}
-		}
+			return true;
+		};
+
+		$scope.validateGrade = function(newValue) {
+			if (isNaN(newValue)) {
+				return false;
+			} else {
+				var num = parseInt(newValue);
+				if (num > 100 || num < 0) {
+					return false;
+				}
+				return true;
+			}
+		};
 
 		$scope.deleteStudent = function(studentId) {
 			studentCollection.remove({
