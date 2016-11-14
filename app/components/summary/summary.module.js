@@ -27,8 +27,6 @@ angular.module('summary', [])
 			    } else {
 					if (summaryCollection._data.length == 0) {
 						console.log("INFO: Adding default summary components to empty db.");
-						// TODO: Validate that the last change was near the last update of the summary
-						// to avoid calculating on load when unnecessary.
 						defaultSummary = {
 							"min": 0,
 							"max": 0,

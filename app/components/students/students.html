@@ -9,7 +9,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="student_row" ng-repeat="student in students">
+			<tr 
+				class="student_row"
+				ng-class="{'failing': student.grade < 65, 'passing': student.grade > 64}"
+				ng-repeat="student in students">
 				<span id="{{student._id}}">
 					<td>
 						<span

@@ -25,8 +25,8 @@ input.ng-invalid,
 	float: left;
 }
 
-.student-input {
-	
+.failing {
+	background-color: lightpink;
 }
 
 #newStudentForm {

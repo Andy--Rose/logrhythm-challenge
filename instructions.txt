@@ -7,12 +7,12 @@ User Story
 As a teacher, I want to enter a list of student names along with his or her test score on a page, so I may see a summary of my class’ performance on a test. The summary shall include the min, max, and average grade.
 
 Acceptance Criteria
-- The summary shall include the min, max, and average grade.
+- (DONE) The summary shall include the min, max, and average grade.
 - (DONE) The list shall support CRUD operations on student names and his or her associated grade 
 - (DONE) The list shall support in-line editing of student names and grades, such that changing a test score and pressing enter (or clicking away from the input field) updates the model
-- Statistics shall automatically update after CRUD operations are performed
-- The list shall validate user input
-- Students in the list with a grade < 65 shall be highlighted to indicate a failing grade
+- (DONE) Statistics shall automatically update after CRUD operations are performed
+- (DONE) The list shall validate user input
+- (DONE) Students in the list with a grade < 65 shall be highlighted to indicate a failing grade
 
 Guidance
 
