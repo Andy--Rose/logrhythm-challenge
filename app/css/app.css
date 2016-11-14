@@ -1,5 +1,18 @@
-#new-student-container {
-	display: none;
+input:invalid {
+  
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.ng-untouched {
+	box-shadow: 0;
+}
+
+input.ng-invalid-maxlength,
+input.ng-invalid {
+	box-shadow: 0 0 5px 1px red;
 }
 
 .new-student-input {
@@ -13,4 +26,8 @@
 
 .student-input {
 	
+}
+
+#newStudentForm {
+	display: none;
 }

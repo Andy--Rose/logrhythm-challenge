@@ -77,21 +77,6 @@ angular.module('students', ['angularInlineEdit'])
 			saveStudents();
 		}
 
-		$scope.editToggle = function(studentId) {
-			var editButton = document.getElementById("btn_edit_" + studentId);
-			var state = editButton.innerHTML;
-
-			if (state === "Edit") {
-				editButton.innerHTML = "Save";
-				$(".student-input-" + studentId).each(function(i, el) {
-					el.readOnly = false;
-				});
-			} else {
-				editButton.innerHTML = "Edit";
-				
-			}
-		};
-
 		function saveStudents() {
 			studentCollection.save(function(err) {
 				if (err) {
