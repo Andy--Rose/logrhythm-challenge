@@ -1,9 +1,9 @@
 input {
-  display: block;
+	display: block;
 }
 
 input:focus:invalid {
-  outline: none;
+	outline: none;
 }
 
 button {
@@ -18,45 +18,44 @@ button {
 	margin: 5px;
 }
 
-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+.panel-heading {
+	cursor: pointer;
+	position: relative;
+	transition: 0.5s;
+	background-color: lightgrey;
+	font: 24px Georgia, serif;
 }
 
-button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+.panel-heading span {
+	display: inline-block;
+	position: relative;
 }
 
-.expanded:after {
+.panel-heading span:after {
+	content: '»';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.panel-heading span.expanded:after {
 	content: '«';
 }
 
-button:hover span {
+.panel-heading:hover span {
   padding-right: 25px;
 }
 
-button:hover span:after {
-  opacity: 1;
-  right: 0;
+.panel-heading:hover span:after {
+	opacity: 1;
+	right: 0;
 }
 
 .title {
 	margin-left: 15px;
 	text-decoration: underline;
-}
-
-.btn-large {
-	font-size: 22px;
-	padding: 15px;
-	width: 200px;
-	margin-left: 25px;
 }
 
 .ng-untouched {
@@ -70,7 +69,6 @@ input.ng-invalid,
 }
 
 .new-student-input {
-	float:left;
 	min-width: 150px;
 }
 
@@ -82,8 +80,12 @@ input.ng-invalid,
 	background-color: lightpink;
 }
 
+.panel {
+	margin-left: 5%;
+	width: 90%;
+}
+
 #btnNewStudent {
-	float: left;
 	background-color: #fcf8b3;
 }
 
@@ -98,11 +100,11 @@ input.ng-invalid,
 .btnDelete {
 	background-color: #f21d47;
 }
-
+/*
 #newStudentForm {
 	display: none;
 	position: relative;
-	left:-300px;
-	float: right;
+	left:100px;
+	margin-left: 100px;
 	margin-bottom: 15px;
-}
+}*/

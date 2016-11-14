@@ -1,16 +1,32 @@
-<form id="newStudentForm" name="newStudentForm" ng-controller="NewStudentController" ng-submit="newStudentForm.$valid && saveNewStudent()">
-	<div role="alert">
+<div id="newStudentContainer" class="panel panel-default">
+	<div class="panel-group">
+		<div id="toggleNewStudent" class="panel-heading" data-toggle="collapse" href="#newStudentConent">
+			<span id="spanNewStudent">New Student</span>
+		</div>
+		<div id="newStudentConent" class="panel-collapse collapse">
+			<div class="panel-body">
+				<form id="newStudentForm" name="newStudentForm" ng-controller="NewStudentController" ng-submit="newStudentForm.$valid && saveNewStudent()">
+					<label for="firstName">First Name: </label>
+					<input type="text" name="firstName" ng-model="newStudent.firstName" ng-maxlength="validation.maxLength" ng-pattern="validation.inputRegex" required>
 
+					<label for="lastName">Last Name: </label>
+					<input type="text" name="lastName" ng-model="newStudent.lastName" ng-maxlength="validation.maxLength" ng-pattern="validation.inputRegex" required>
+
+					<label for="grade">Grade: </label>
+					<input type="number" name="grade" min="0" max="100" ng-model="newStudent.grade" required>
+					<br />
+					<button id="btnSaveStudent" type="submit">Save</button>
+					<button id="btnClearStudent" ng-click="resetInput()">Clear</button>
+				</form>
+			</div>
+		</div>
 	</div>
-	<label for="firstName">First Name: </label>
-	<input type="text" name="firstName" ng-model="newStudent.firstName" ng-maxlength="validation.maxLength" ng-pattern="validation.inputRegex" required>
+</div>
 
-	<label for="lastName">Last Name: </label>
-	<input type="text" name="lastName" ng-model="newStudent.lastName" ng-maxlength="validation.maxLength" ng-pattern="validation.inputRegex" required>
-
-	<label for="grade">Grade: </label>
-	<input type="number" name="grade" min="0" max="100" ng-model="newStudent.grade" required>
-	<br />
-	<button id="btnSaveStudent" type="submit">Save</button>
-	<button id="btnClearStudent" ng-click="resetInput()">Clear</button>
-</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#toggleNewStudent').click(function(){
+			$('#spanNewStudent').toggleClass('expanded');
+		});
+	})
+</script>

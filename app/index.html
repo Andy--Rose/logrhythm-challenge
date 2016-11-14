@@ -6,7 +6,6 @@
 </head>
 <body ng-controller="AppController">
 	<h1 class="title">Student Grades</h1>
-	<button id="btnNewStudent" class="btn-large"><span id="spanNewStudent">New Student</span></button>
 	<new-student></new-student>
 	<students> </students>
 	<summary> </summary>
@@ -18,6 +17,9 @@
 	<script src="./node_modules/forerunnerdb/js/dist/fdb-all.min.js"></script>
 	<script src="./node_modules/forerunnerdb/js/dist/fdb-autobind.min.js"></script>
 	<script src="./node_modules/forerunnerdb/js/dist/fdb-angular.min.js"></script>
+	<script src="./node_modules/highcharts/js/highcharts.js"></script>
+	<script src="./node_modules/highcharts/js/highcharts-more.js"></script>
+	<script src="./node_modules/highcharts/js/modules/exporting.js"></script>
 	<script src="app.module.js"></script>
 	<script src="components/students/students.module.js"></script>
 	<script src="components/students/students.component.js"></script>
@@ -26,18 +28,4 @@
 	<script src="components/summary/summary.module.js"></script>
 	<script src="components/summary/summary.component.js"></script>
 </body>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#btnNewStudent').click(function(){
-			$('#newStudentForm').toggle(function() {
-				$('#newStudentForm').animate({left: 0}, 500);
-				$('#spanNewStudent').toggleClass('expanded');
-			}, function() {
-				$('#newStudentForm').animate({left: -300}, 500);
-				$('#spanNewStudent').toggleClass('expanded');
-			});
-		})
-	})
-</script>
 </html>

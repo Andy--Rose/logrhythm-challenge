@@ -1,63 +1,80 @@
-<div class="container-fluid" ng-init="initStudents()">
-	<table class="table table-hover" id="students_table">
-		<thead>
-			<tr>
-				<th>Last Name</th>
-				<th>First Name</th>
-				<th>Grade</th>
-				<th>Actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr 
-				class="student_row"
-				ng-class="{'failing': student.grade < 65, 'passing': student.grade > 64}"
-				ng-repeat="student in students">
-				<span id="{{student._id}}">
-					<td>
-						<span
-							id="student-input-lastName-{{student._id}}"
-							class="student-input student-input-{{student._id}}"
-							inline-edit="student.lastName"
-							inline-edit-callback="handleEdit(student, 'lastName')"
-							inline-edit-placeholder="student.lastName"
-							inline-edit-validation="validateName(newValue)"
-							inline-edit-btn-edit=""
-							inline-edit-on-blur="save"
-							inline-edit-on-click>
-						</span>
-					</td>
-					<td>
-						<span
-							id="student-input-firstName-{{student._id}}"
-							class="student-input student-input-{{student._id}}"
-							inline-edit="student.firstName"
-							inline-edit-callback="handleEdit(student, 'firstName')"
-							inline-edit-placeholder="student.firstName"
-							inline-edit-validation="validateName(newValue)"
-							inline-edit-btn-edit=""
-							inline-edit-on-blur="save"
-							inline-edit-on-click>
-						</span>
-					</td>
-					<td>
-						<span
-							id="student-input-grade-{{student._id}}"
-							class="student-input student-input-{{student._id}}"
-							inline-edit="student.grade"
-							inline-edit-callback="handleEdit(student, 'grade')"
-							inline-edit-placeholder="student.grade"
-							inline-edit-validation="validateGrade(newValue)"
-							inline-edit-btn-edit=""
-							inline-edit-on-blur="save"
-							inline-edit-on-click>
-						</span>
-					</td>
-					<td>
-						<button id="btn_delete_{{student._id}}" class="btnDelete" ng-click="deleteStudent(student._id)">Delete</button>
-					</td>
-				</span>
-			</tr>
-		</tbody>
-	</table>
+<div id="studentContainer" class="panel panel-default" ng-init="initStudents()">
+	<div class="panel-group">
+		<div id="toggleStudents" class="panel-heading" data-toggle="collapse" href="#studentsConent">
+			<span id="spanStudents">Grades</span>
+		</div>
+		<div id="studentsConent" class="panel-collapse collapse">
+			<div class="panel-body">
+				<table class="table table-hover" id="students_table">
+					<thead>
+						<tr>
+							<th>Last Name</th>
+							<th>First Name</th>
+							<th>Grade</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr 
+							class="student_row"
+							ng-class="{'failing': student.grade < 65, 'passing': student.grade > 64}"
+							ng-repeat="student in students">
+							<span id="{{student._id}}">
+								<td>
+									<span
+										id="student-input-lastName-{{student._id}}"
+										class="student-input student-input-{{student._id}}"
+										inline-edit="student.lastName"
+										inline-edit-callback="handleEdit(student, 'lastName')"
+										inline-edit-placeholder="student.lastName"
+										inline-edit-validation="validateName(newValue)"
+										inline-edit-btn-edit=""
+										inline-edit-on-blur="save"
+										inline-edit-on-click>
+									</span>
+								</td>
+								<td>
+									<span
+										id="student-input-firstName-{{student._id}}"
+										class="student-input student-input-{{student._id}}"
+										inline-edit="student.firstName"
+										inline-edit-callback="handleEdit(student, 'firstName')"
+										inline-edit-placeholder="student.firstName"
+										inline-edit-validation="validateName(newValue)"
+										inline-edit-btn-edit=""
+										inline-edit-on-blur="save"
+										inline-edit-on-click>
+									</span>
+								</td>
+								<td>
+									<span
+										id="student-input-grade-{{student._id}}"
+										class="student-input student-input-{{student._id}}"
+										inline-edit="student.grade"
+										inline-edit-callback="handleEdit(student, 'grade')"
+										inline-edit-placeholder="student.grade"
+										inline-edit-validation="validateGrade(newValue)"
+										inline-edit-btn-edit=""
+										inline-edit-on-blur="save"
+										inline-edit-on-click>
+									</span>
+								</td>
+								<td>
+									<button id="btn_delete_{{student._id}}" class="btnDelete" ng-click="deleteStudent(student._id)">Delete</button>
+								</td>
+							</span>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#toggleStudents').click(function(){
+			$('#spanStudents').toggleClass('expanded');
+		});
+	})
+</script>
