@@ -1,9 +1,62 @@
-input:invalid {
-  
+input {
+  display: block;
 }
 
 input:focus:invalid {
   outline: none;
+}
+
+button {
+	display: inline-block;
+	background-color: #f4511e;
+	border-radius: 4px;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.expanded:after {
+	content: '«';
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.title {
+	margin-left: 15px;
+	text-decoration: underline;
+}
+
+.btn-large {
+	font-size: 22px;
+	padding: 15px;
+	width: 200px;
+	margin-left: 25px;
 }
 
 .ng-untouched {
@@ -29,6 +82,27 @@ input.ng-invalid,
 	background-color: lightpink;
 }
 
+#btnNewStudent {
+	float: left;
+	background-color: #fcf8b3;
+}
+
+#btnSaveStudent {
+	background-color: #a2d6ba;
+}
+
+#btnClearStudent {
+	background-color: lightpink;
+}
+
+.btnDelete {
+	background-color: #f21d47;
+}
+
 #newStudentForm {
 	display: none;
+	position: relative;
+	left:-300px;
+	float: right;
+	margin-bottom: 15px;
 }

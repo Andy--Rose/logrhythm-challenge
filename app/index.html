@@ -5,8 +5,8 @@
 	<link rel="stylesheet" href="./bower_components/ng-inline-edit/dist/ng-inline-edit.min.css">
 </head>
 <body ng-controller="AppController">
-	<p><h1>Student Grades</h1></p>
-	<button id="toggleNewStudent">New Student</button>
+	<h1 class="title">Student Grades</h1>
+	<button id="btnNewStudent" class="btn-large"><span id="spanNewStudent">New Student</span></button>
 	<new-student></new-student>
 	<students> </students>
 	<summary> </summary>
@@ -29,8 +29,14 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#toggleNewStudent').click(function(){
-			$('#newStudentForm').toggle();
+		$('#btnNewStudent').click(function(){
+			$('#newStudentForm').toggle(function() {
+				$('#newStudentForm').animate({left: 0}, 500);
+				$('#spanNewStudent').toggleClass('expanded');
+			}, function() {
+				$('#newStudentForm').animate({left: -300}, 500);
+				$('#spanNewStudent').toggleClass('expanded');
+			});
 		})
 	})
 </script>

@@ -1,14 +1,6 @@
 <form id="newStudentForm" name="newStudentForm" ng-controller="NewStudentController" ng-submit="newStudentForm.$valid && saveNewStudent()">
 	<div role="alert">
-		<span class="error" ng-show="newStudentForm.firstName.$touched && newStudentForm.firstName.$invalid">
-			First Name is not valid.
-		</span>
-		<span class="error" ng-show="newStudentForm.lastName.$touched && newStudentForm.lastName.$invalid">
-			Last Name is not valid.
-		</span>
-		<span class="error" ng-show="newStudentForm.grade.$touched && newStudentForm.grade.$invalid">
-			Grade is not valid.
-		</span>
+
 	</div>
 	<label for="firstName">First Name: </label>
 	<input type="text" name="firstName" ng-model="newStudent.firstName" ng-maxlength="validation.maxLength" ng-pattern="validation.inputRegex" required>
@@ -18,7 +10,7 @@
 
 	<label for="grade">Grade: </label>
 	<input type="number" name="grade" min="0" max="100" ng-model="newStudent.grade" required>
-
-	<button type="submit">Save</button>
-	<button id="new-student-clear" ng-click="resetInput()">Cancel</button>
+	<br />
+	<button id="btnSaveStudent" type="submit">Save</button>
+	<button id="btnClearStudent" ng-click="resetInput()">Clear</button>
 </form>
