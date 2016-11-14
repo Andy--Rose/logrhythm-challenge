@@ -5,7 +5,7 @@ angular.module("newStudent", [])
 			var newStudent = {
 				"firstName": $scope.firstName,
 				"lastName": $scope.lastName,
-				"grade": $scope.grade
+				"grade": parseInt($scope.grade)
 			}
 			students.insert(newStudent);
 			console.log("INFO: Stored " + $scope.firstName + " " + $scope.lastName + " to the DB.");

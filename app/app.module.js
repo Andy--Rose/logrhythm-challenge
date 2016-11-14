@@ -1,43 +1,8 @@
 // Module
-angular.module('gradesApp', ['forerunnerdb', 'newStudent', 'students'])
+angular.module('gradesApp', ['forerunnerdb', 'newStudent', 'students', 'summary'])
 	.run(function ($rootScope, $fdb) {
-		var students = $fdb.db('grades').collection('students');
-		students.load(function (err, tableStats, metaStats) {
-		    if (!err) {
-		        // $rootScope.$db = db;
-				// $rootScope.$students = db.collection('students');
-				if (students._data.length == 0) {
-					console.log("INFO: Adding default students to empty db.");
-					defaultStudents = [
-						{
-							"firstName": "John",
-							"lastName": "Doe",
-							"grade": 43
-						},
-						{
-							"firstName": "Jenn",
-							"lastName": "Smarts",
-							"grade": 99
-						},
-						{
-							"firstName": "Joe",
-							"lastName": "Shmoe",
-							"grade": 78
-						}
-					];
-					students.insert(defaultStudents);
-				}
-				// Even if the loaded data was not modified, it still has to be saved in order to 
-				// maintain over multiple refreshes. I am not a fan of this package...
-				students.save(function(err) {
-					if (err) {
-						console.log("ERROR: Failed saving db.\n" + err);
-					} else {
-						console.log("INFO: Saved db.")
-					}
-				});
-		    }
-		});
+		$rootScope.summaryCollection = $fdb.db('grades').collection('summary');
+		$rootScope.studentCollection = $fdb.db('grades').collection('students');
 	})
 	.controller('AppController', function AppController($scope) {
 

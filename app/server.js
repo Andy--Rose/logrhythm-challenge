@@ -1,21 +1,4 @@
 var Express = require('express');
-// var ForerunnerDB = require('forerunnerdb');
-
-// // Set up the DB
-// var fdb = new ForerunnerDB();
-// var db = fdb.db("grades");
-// db.persist.dataDir("./app/data/grades");
-// db.persist.auto(true);
-
-// // create then load the students from the DB
-// var students = db.collection("students");
-// students.load(function(err, tableStats, metaStats) {
-// 	if (err) {
-// 		console.log("ERROR: Failed loading DB collection for Students.\n" + err);
-// 	} else {
-// 		console.log("INFO: Loaded DB collection Students:\n" + tableStats + "\n" + metaStats);
-// 	}
-// })
 
 // configure the server
 const Server = Express()
@@ -47,12 +30,6 @@ Server.get('/', function(request, response) {
 		}
 	});
 });
-
-// return 201 for created
-// Server.post('/save-data', function(request, response) {
-// 	console.log(students);
-// 	students.save();
-// });
 
 // create server to listen for calls to the port
 Server.listen(Port, function(err) {
