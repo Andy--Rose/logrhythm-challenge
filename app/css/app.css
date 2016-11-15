@@ -100,11 +100,23 @@ input.ng-invalid,
 .btnDelete {
 	background-color: #f21d47;
 }
-/*
-#newStudentForm {
+
+.highcharts-yaxis-grid .highcharts-grid-line {
 	display: none;
-	position: relative;
-	left:100px;
-	margin-left: 100px;
-	margin-bottom: 15px;
+}
+
+.chart {
+	float: left;
+	width: 300px;
+	height: 200px;
+	margin-left: -15%;
+}
+/*
+.highcharts-background {
+	fill: #ffffff;
+}
+
+.highcharts-plot-background,
+.highcharts-plot-border {
+	fill: none;
 }*/

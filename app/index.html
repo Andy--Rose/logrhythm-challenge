@@ -17,9 +17,12 @@
 	<script src="./node_modules/forerunnerdb/js/dist/fdb-all.min.js"></script>
 	<script src="./node_modules/forerunnerdb/js/dist/fdb-autobind.min.js"></script>
 	<script src="./node_modules/forerunnerdb/js/dist/fdb-angular.min.js"></script>
-	<script src="./node_modules/highcharts/js/highcharts.js"></script>
-	<script src="./node_modules/highcharts/js/highcharts-more.js"></script>
-	<script src="./node_modules/highcharts/js/modules/exporting.js"></script>
+
+	<!--  Highcharts has to be loaded from site. Packaged version did not work, even though it is the same version... -->
+	<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    
 	<script src="app.module.js"></script>
 	<script src="components/students/students.module.js"></script>
 	<script src="components/students/students.component.js"></script>
