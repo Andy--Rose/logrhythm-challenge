@@ -104,8 +104,6 @@ angular.module('summary', [])
 			$scope.calculateSummary();
 		}
 
-		//TODO: Update graphs with calculate function
-		//   Store values directly in the scope for min max and avg that can be used in the chart options like in the example
 		$scope.calculateSummary = function() {
 			// Retreive and sort grades
 			var grades = $scope.studentCollection.find({}, {
