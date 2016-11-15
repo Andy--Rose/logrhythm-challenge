@@ -39,7 +39,7 @@ ng-inline-edit - (bower) Used to do inline editing with saving by hitting enter 
 3. Move to the /app directory
 4. Run 'npm install'
 5. Run 'bower install'
-6. Run 'node index.js' to start the server
+6. Return to the application's root directory and run 'node index.js' to start the server
   1. May be 'nodejs index.js' on some installations
 
 ## Things Left Undone
