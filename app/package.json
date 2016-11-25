@@ -1,10 +1,10 @@
 {
-  "name": "logrhythm-challenge",
-  "version": "1.0.0",
-  "description": "Challenge for application process to LogRhythm.",
+  "name": "student-grading-challenge",
+  "version": "1.0.1",
+  "description": "Show student grades. Should support CRUD actions for students.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Andy Rose",
   "license": "UNLICENSED",
@@ -15,6 +15,7 @@
   	"forerunnerdb": "^1.3.930",
     "highcharts": "^5.0.2",
     "jquery": "^3.1.1",
+    "karma": "^1.3.0",
     "mocha": "^3.2.0"
   }
 }
